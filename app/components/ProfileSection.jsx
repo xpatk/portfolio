@@ -1,28 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-
-const ExampleComponent = () => {
-  return (
-    <TypeAnimation
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        "We produce food for Mice",
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        "We produce food for Hamsters",
-        1000,
-        "We produce food for Guinea Pigs",
-        1000,
-        "We produce food for Chinchillas",
-        1000,
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: "2em", display: "inline-block" }}
-      repeat={Infinity}
-    />
-  );
-};
 
 const ProfileSection = () => {
   return (
@@ -33,7 +12,22 @@ const ProfileSection = () => {
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               Hello, I'm{""}
             </div>
-            Patrycja
+            <TypeAnimation
+              sequence={[
+                "Patrycja",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "Web Developer",
+                1000,
+                "Java Developer",
+                1000,
+                "Graphist",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "1.2em", display: "inline-block" }}
+              repeat={Infinity}
+            />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
