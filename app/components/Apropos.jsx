@@ -3,6 +3,48 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
+const TAB_DATA = [
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>NoSQL</li>
+        <li>React</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    ),
+  },
+  {
+    title: "Experience",
+    id: "experience",
+    content: (
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    ),
+  },
+];
+
 const Apropos = () => {
   const [tab, setTab] = useState("skills");
   const [isPending, startTransition] = useTransition();
@@ -36,14 +78,20 @@ const Apropos = () => {
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Compétences{" "}
-            </TabButton>
-            <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-blue-600">
               Compétences
-            </span>
-            <span>Éducation</span>
-            <span>Éxperience</span>
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
+            >
+              Éducation
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("experiences")}
+              active={tab === "experiences"}
+            >
+              Éxperience
+            </TabButton>
           </div>
         </div>
       </div>
