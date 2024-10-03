@@ -15,7 +15,7 @@ const ProfileSection = () => {
             <TypeAnimation
               sequence={[
                 "Patrycja",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                1000,
                 "Web Developer",
                 1000,
                 "Java Developer",

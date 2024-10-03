@@ -15,6 +15,7 @@ const TAB_DATA = [
         <li>Node.js</li>
         <li>Express</li>
         <li>NoSQL</li>
+        <li>SQL</li>
         <li>React</li>
       </ul>
     ),
@@ -24,22 +25,22 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>BAC +3/4 Développeur d'applications - Java (à venir)</li>
+        <li>BAC +2 Développeur Web</li>
+        <li>BAC +3 Indologie Université de Varsovie</li>
       </ul>
     ),
   },
   {
-    title: "Experience",
-    id: "experience",
+    title: "Prochaines",
+    id: "prochaines",
     content: (
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>Microservices</li>
+        <li>PHP</li>
+        <li>UML</li>
       </ul>
     ),
   },
@@ -59,7 +60,7 @@ const Apropos = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/images/comp.png" width={500} height={500} />
-        <div>
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl gont-bold text-white mb-4">
             A propos de moi
           </h2>
@@ -73,7 +74,7 @@ const Apropos = () => {
             amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua.
           </p>
-          <div className="flex flex-row mt-8">
+          <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -87,11 +88,14 @@ const Apropos = () => {
               Éducation
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("experiences")}
-              active={tab === "experiences"}
+              selectTab={() => handleTabChange("prochaines")}
+              active={tab === "prochaines"}
             >
-              Éxperience
+              Axe de progression
             </TabButton>
+          </div>
+          <div className="mt-8">
+            {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
       </div>
