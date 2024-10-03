@@ -8,7 +8,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>HTML</li>
         <li>CSS</li>
         <li>JavaScript</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>BAC +3/4 Développeur d'applications - Java (à venir)</li>
         <li>BAC +2 Développeur Web</li>
         <li>BAC +3 Indologie Université de Varsovie</li>
@@ -35,7 +35,7 @@ const TAB_DATA = [
     title: "Prochaines",
     id: "prochaines",
     content: (
-      <ul>
+      <ul className="list-disc pl-2">
         <li>Java</li>
         <li>Spring Boot</li>
         <li>Microservices</li>
