@@ -41,6 +41,7 @@ const TAB_DATA = [
         <li>Microservices</li>
         <li>PHP</li>
         <li>UML</li>
+        <li>Angular</li>
       </ul>
     ),
   },

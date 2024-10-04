@@ -49,7 +49,7 @@ const ProfileSection = () => {
           </div>
         </div>
         <div className="col-span-5 lg:ml-10 mt-10 lg:mt-4 place-self-center">
-          <div className="rounded-full bg-[#181818] w-[330px] h-[330px] relative">
+          <div className="rounded-full bg-[#121212] w-[310px] h-[310px] relative">
             <Image
               src="/images/profile-circle.png"
               alt="profile picture"
