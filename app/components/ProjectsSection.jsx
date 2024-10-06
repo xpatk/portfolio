@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import PreviousMap from "postcss/lib/previous-map";
+import ProjectTag from "./ProjectTag";
 
 const projectsData = [
   {
@@ -46,11 +47,38 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
+  const [tag, setTag] = useState("Tous");
+
+  const handleTagChange = (newTag) => {
+    setTag(newTag);
+  };
+
+  const filterProjects = projectsData.filter((project) => {
+    return project.tag.includes(tag);
+  });
+
   return (
     <>
       <h2 className="text-4xl font-bold text-white mb-4">Mes Projets</h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Tous"
+          isSelected={tag === "Tous"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Front-end"
+          isSelected={tag === "Front-end"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Back-end"
+          isSelected={tag === "Back-end"}
+        />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projectsData.map((project) => (
+        {filterProjects.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}
