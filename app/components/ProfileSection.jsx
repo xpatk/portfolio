@@ -10,7 +10,7 @@ const ProfileSection = () => {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-sky-700 to-gray-900">
-              Hello, I'm{""}
+              Hello, I&#39;m{""}
             </div>
             <TypeAnimation
               sequence={[
@@ -18,8 +18,8 @@ const ProfileSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "Java Developer",
-                1000,
+                // "Java Developer",
+                // 1000,
                 "Graphist",
                 1000,
               ]}
