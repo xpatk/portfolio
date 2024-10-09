@@ -2,13 +2,19 @@
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 const ProfileSection = () => {
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl  font-extrabold">
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-sky-700 to-gray-900">
               Hello, I&#39;m{""}
             </div>
@@ -47,8 +53,13 @@ const ProfileSection = () => {
               </span>
             </button>
           </div>
-        </div>
-        <div className="col-span-4 lg:ml-10 mt-10 lg:mt-4 place-self-center">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-4 lg:ml-10 mt-10 lg:mt-4 place-self-center"
+        >
           <div className="rounded-full bg-[#121212] w-[310px] h-[310px] relative">
             <Image
               src="/images/profile-circle.png"
@@ -58,7 +69,7 @@ const ProfileSection = () => {
               height={300}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
