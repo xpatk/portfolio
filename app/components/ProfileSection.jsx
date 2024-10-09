@@ -38,10 +38,10 @@ const ProfileSection = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-gray-400 to-sky-700 hover:from-gray-600 hover:to-sky-900 text-white">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-sky-700 hover:bg-slate-800 text-white">
               Embauchez-moi
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-gray-400 to-sky-700 hover:bg-slate-800 text-white  mt-3">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-sky-700 hover:bg-sky-800 text-white  mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Téléchargez le CV
               </span>
