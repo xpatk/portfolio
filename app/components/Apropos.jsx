@@ -25,7 +25,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>BAC +3/4 Développeur d'applications - Java (à venir)</li>
+        <li>BAC +3/4 Développeur d&#39;applications - Java (à venir)</li>
         <li>BAC +2 Développeur Web</li>
         <li>BAC +3 Indologie Université de Varsovie</li>
       </ul>

@@ -5,10 +5,10 @@ import { TypeAnimation } from "react-type-animation";
 
 const ProfileSection = () => {
   return (
-    <section>
+    <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+        <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-sky-700 to-gray-900">
               Hello, I&#39;m{""}
             </div>
@@ -16,7 +16,7 @@ const ProfileSection = () => {
               sequence={[
                 "Patrycja",
                 1000,
-                "Web Developer",
+                "Developer",
                 1000,
                 // "Java Developer",
                 // 1000,
@@ -48,7 +48,7 @@ const ProfileSection = () => {
             </button>
           </div>
         </div>
-        <div className="col-span-5 lg:ml-10 mt-10 lg:mt-4 place-self-center">
+        <div className="col-span-4 lg:ml-10 mt-10 lg:mt-4 place-self-center">
           <div className="rounded-full bg-[#121212] w-[310px] h-[310px] relative">
             <Image
               src="/images/profile-circle.png"
