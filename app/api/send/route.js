@@ -15,17 +15,14 @@ export async function POST(req, res) {
       react: (
         <>
           <h1>{subject}</h1>
-          <p>Bien reçu, merci !</p>
-
           <p>
-            Bonjour, Je vous remercie d&#39;avoir pris le temps de me contacter
-            via mon portfolio en ligne. J&#39;ai bien reçu votre message et je
+            Bonjour, Je vous remercie d'avoir pris le temps de me contacter via
+            mon portfolio en ligne. J'ai bien reçu votre message et je
             reviendrai vers vous dans les plus brefs délais. Bonne journée et à
             très bientôt,
           </p>
           <p>Patrycja Kruczyńska</p>
-          <hr style={{ margin: "20px 0", border: "1px solid #ccc" }} />
-          <p style={{ fontStyle: "italic" }}>{message}</p>
+          <p>{message}</p>
         </>
       ),
     });
