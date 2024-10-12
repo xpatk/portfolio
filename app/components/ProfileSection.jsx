@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ProfileSection = () => {
   return (
@@ -48,13 +49,19 @@ const ProfileSection = () => {
           </p>
 
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-sky-700 hover:bg-slate-800 text-white">
-              Embauchez-moi
-            </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-sky-700 hover:bg-sky-800 text-white  mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+            <Link href="#contact" passHref>
+              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-sky-700 hover:bg-slate-800 text-white">
+                Contactez-moi
+              </button>
+            </Link>
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-sky-700 hover:bg-sky-800 text-white mt-3">
+              <a
+                href="PatKruczynska_CV.pdf"
+                download
+                className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2"
+              >
                 Téléchargez le CV
-              </span>
+              </a>
             </button>
           </div>
         </motion.div>

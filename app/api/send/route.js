@@ -17,7 +17,7 @@ export async function POST(req, res) {
           <h1>{subject}</h1>
           <p>
             Bonjour, Je vous remercie d&apos;avoir pris le temps de me contacter
-            via mon portfolio en ligne. J&apos;ai bien reçu votre message et je
+            via mon portfolio. J&apos;ai bien reçu votre message et je
             reviendrai vers vous dans les plus brefs délais. Bonne journée et à
             très bientôt,
           </p>
