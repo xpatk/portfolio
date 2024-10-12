@@ -9,14 +9,13 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>NoSQL</li>
-        <li>SQL</li>
-        <li>React</li>
+        <li>Front-End : HTML, CSS, JavaScript, React</li>
+        <li>Back-End : Node.js, Express</li>
+        <li>Bases de données : NoSQL</li>
+        <li>Outils : Git, APIs REST</li>
+        <li>En cours d&rsquo;apprentissage&nbsp;: PHP, SQL, Java</li>
+        <li>Autres&nbsp;: Gestion de projet</li>
+        <li>Je travaille aussi avec Wordpress</li>
       </ul>
     ),
   },
@@ -25,7 +24,7 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>BAC +3/4 Développeur d&#39;applications - Java (à venir)</li>
+        <li>BAC +3/4 Développeur d&#39;applications - Java</li>
         <li>BAC +2 Développeur Web</li>
         <li>BAC +3 Indologie Université de Varsovie</li>
       </ul>
@@ -42,6 +41,7 @@ const TAB_DATA = [
         <li>PHP</li>
         <li>UML</li>
         <li>Angular</li>
+        <li>Python</li>
       </ul>
     ),
   },
@@ -71,14 +71,16 @@ const Apropos = () => {
             A propos de moi
           </h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua.
+            Je suis développeuse web full-stack, passionnée par le développement
+            d&rsquo;applications interactives et réactives. J&rsquo;ai de
+            l&rsquo;expérience avec JavaScript, React, Node.js, Express, SQL,
+            NoSQL, HTML, CSS, et Git. J&rsquo;aime relever des défis techniques
+            et j&rsquo;apprends rapidement pour enrichir mes compétences.
+            Travailler en équipe est une source de motivation, et je suis
+            impatiente de collaborer sur des projets inspirants. Actuellement,
+            je poursuis mes études avec une{" "}
+            <strong>spécialisation en Java</strong> dans le cadre de mon
+            parcours Bac+3/4.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -97,10 +99,10 @@ const Apropos = () => {
               selectTab={() => handleTabChange("prochaines")}
               active={tab === "prochaines"}
             >
-              Axe de progression
+              Mes futurs défis
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className="mt-4">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

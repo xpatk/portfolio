@@ -14,19 +14,19 @@ const ProfileSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl  font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl  font-extrabold">
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-sky-700 to-gray-900">
-              Hello, I&#39;m{""}
+              Hello, je suis{""}
             </div>
             <TypeAnimation
               sequence={[
                 "Patrycja",
                 1000,
-                "Developer",
+                "Développeuse",
                 1000,
                 // "Java Developer",
                 // 1000,
-                "Graphist",
+                "Graphiste",
                 1000,
               ]}
               wrapper="span"
@@ -40,9 +40,13 @@ const ProfileSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Je me spécialise dans la création d&rsquo;applications web
+            dynamiques et réactives, offrant une expérience utilisateur fluide.
+            Avec une expertise en front-end et back-end, je transforme les idées
+            en solutions digitales fonctionnelles. Mon objectif&nbsp;?
+            Développer des logiciels innovants, évolutifs et performants.
           </p>
+
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-sky-700 hover:bg-slate-800 text-white">
               Embauchez-moi
