@@ -56,7 +56,7 @@ const ProfileSection = () => {
             </Link>
             <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-sky-700 hover:bg-sky-800 text-white mt-3">
               <a
-                href="PatKruczynska_CV.pdf"
+                href="PKruczynska_CV.pdf"
                 download
                 className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2"
               >
