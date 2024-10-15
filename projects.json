@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Booki",
+    "description": "Intégration du contenu conformément à la maquette fournie, en utilisant HTML et CSS. Implémentation d'une interface responsive.",
+    "image": "images/1.PNG",
+    "tag": ["Tous", "Front-end"],
+    "gitUrl": "https://github.com/xpatk/Booki-P2"
+  },
+  {
+    "id": 2,
+    "title": "Sophie Bluel",
+    "description": "Un site d'une architecte. Développement web avec JavaScript. Gestion des événements et des données utilisateurs via les formulaires.",
+    "image": "images/2.PNG",
+    "tag": ["Tous", "Front-end"],
+    "gitUrl": "https://github.com/xpatk/SophieBluel_P3"
+  },
+  {
+    "id": 3,
+    "title": "Kasa",
+    "description": "Site de location. Développement des éléments d'interface du site grâce à des composants React. Navigation effectuée avec React Router.",
+    "image": "images/3.PNG",
+    "tag": ["Tous", "Front-end"],
+    "gitUrl": "https://github.com/xpatk/Kasa"
+  },
+  {
+    "id": 4,
+    "title": "Mon Vieux Grimoire",
+    "description": "Développement back-end avec Node.js et Express.js. Modélisation logique des données et mise en œuvre des opérations CRUD de manière sécurisée. Stockage des données.",
+    "image": "images/4.PNG",
+    "tag": ["Tous", "Back-end"],
+    "gitUrl": "https://github.com/xpatk/Grimoir"
+  }
+]
