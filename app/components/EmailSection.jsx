@@ -14,6 +14,7 @@ const EmailSection = () => {
     const token = await recaptchaRef.current.executeAsync();
     recaptchaRef.current.reset();
     if (!token) {
+      console.error("reCAPTCHA token is missing");
       setCaptchaError(true);
       return;
     }
@@ -108,6 +109,13 @@ const EmailSection = () => {
               />
             </div>
 
+            <button
+              type="submit"
+              className="bg-sky-600 hover:bg-sky-900 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            >
+              Envoyer
+            </button>
+
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
@@ -118,13 +126,6 @@ const EmailSection = () => {
                 Veuillez vérifier le reCAPTCHA.
               </p>
             )}
-
-            <button
-              type="submit"
-              className="bg-sky-600 hover:bg-sky-900 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            >
-              Envoyer
-            </button>
           </form>
         )}
       </div>
