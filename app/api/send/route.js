@@ -20,6 +20,7 @@ export async function POST(req) {
       }),
     });
     const captchaData = await captchaResponse.json();
+    console.log("Captcha data:", captchaData);
 
     if (!captchaData.success) {
       return NextResponse.json(

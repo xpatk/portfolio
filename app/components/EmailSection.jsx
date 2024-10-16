@@ -35,6 +35,8 @@ const EmailSection = () => {
     if (response.status === 200) {
       console.log("Message sent.");
       setEmailSubmitted(true);
+    } else {
+      console.error("failed to send", response);
     }
   };
 
@@ -111,7 +113,7 @@ const EmailSection = () => {
 
             <button
               type="submit"
-              className="bg-sky-600 hover:bg-sky-900 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="z-10 bg-sky-600 hover:bg-sky-900 text-white font-medium py-2.5 px-5 rounded-lg w-full relative"
             >
               Envoyer
             </button>
