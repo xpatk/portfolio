@@ -9,8 +9,16 @@ export async function POST(req) {
     const { email, subject, message, token } = await req.json();
     console.log(email, subject, message);
 
-    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`;
-    const captchaResponse = await fetch(verifyUrl, { method: "POST" });
+    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify`;
+
+    const captchaResponse = await fetch(verifyUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: process.env.RECAPTCHA_SECRET_KEY,
+        response: token,
+      }),
+    });
     const captchaData = await captchaResponse.json();
 
     if (!captchaData.success) {
