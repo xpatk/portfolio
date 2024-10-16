@@ -42,6 +42,11 @@ export default function RootLayout({ children }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          async
+          defer
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
