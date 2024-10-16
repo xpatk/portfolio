@@ -7,10 +7,9 @@ const fromEmail = process.env.FROM_EMAIL;
 export async function POST(req) {
   try {
     const { email, subject, message, token } = await req.json();
-    console.log(email, subject, message);
+    console.log("Form data:", email, subject, message);
 
-    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify`;
-
+    const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
     const captchaResponse = await fetch(verifyUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -19,17 +18,18 @@ export async function POST(req) {
         response: token,
       }),
     });
-    const captchaData = await captchaResponse.json();
-    console.log("Captcha data:", captchaData);
 
-    if (!captchaData.success) {
+    const captchaData = await captchaResponse.json();
+    console.log("Captcha response:", captchaData);
+
+    if (!captchaData.success || captchaData.score < 0.5) {
       return NextResponse.json(
         { error: "reCAPTCHA verification failed" },
         { status: 400 }
       );
     }
 
-    const data = await resend.emails.send({
+    const emailData = await resend.emails.send({
       from: fromEmail,
       to: [fromEmail, email],
       subject: subject,
@@ -48,9 +48,9 @@ export async function POST(req) {
       ),
     });
 
-    return NextResponse.json(data);
+    return NextResponse.json(emailData);
   } catch (error) {
-    console.error(error);
+    console.error("Error in POST handler:", error);
     return NextResponse.json(
       { error: "Failed to send message" },
       { status: 500 }

@@ -9,10 +9,12 @@ const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [captchaError, setCaptchaError] = useState(false);
   const recaptchaRef = useRef(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await recaptchaRef.current.executeAsync();
+    const token = await recaptchaRef.current.execute();
     recaptchaRef.current.reset();
+
     if (!token) {
       console.error("reCAPTCHA token is missing");
       setCaptchaError(true);
@@ -36,7 +38,7 @@ const EmailSection = () => {
       console.log("Message sent.");
       setEmailSubmitted(true);
     } else {
-      console.error("failed to send", response);
+      console.error("Failed to send", response);
     }
   };
 
@@ -122,6 +124,7 @@ const EmailSection = () => {
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
               size="invisible"
+              badge="inline"
             />
             {captchaError && (
               <p className="text-red-600 text-sm mt-2">
