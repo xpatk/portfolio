@@ -13,7 +13,7 @@ const Footer = () => {
           className="h-auto w-auto"
         />
 
-        <p className="text-slate-400">
+        <p className="text-slate-300">
           &copy; {new Date().getFullYear()} All rights reserved
         </p>
       </div>
