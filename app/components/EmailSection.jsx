@@ -115,7 +115,7 @@ const EmailSection = () => {
 
             <button
               type="submit"
-              className="z-10 bg-sky-600 hover:bg-sky-900 text-white font-medium py-2.5 px-5 rounded-lg w-full relative"
+              className="z-10 bg-sky-700 hover:bg-sky-900 text-white font-medium py-2.5 px-5 rounded-lg w-full relative"
             >
               Envoyer
             </button>
