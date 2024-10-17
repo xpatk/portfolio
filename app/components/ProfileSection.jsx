@@ -75,7 +75,7 @@ const ProfileSection = () => {
         >
           <div className="rounded-full bg-[#121212] w-[310px] h-[310px] relative">
             <Image
-              src="/images/profile-circle.png"
+              src="/images/profile-circle.webp"
               alt="image of a girl working on a computer anime style"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
