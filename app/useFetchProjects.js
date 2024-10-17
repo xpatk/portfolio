@@ -14,7 +14,6 @@ const useFetchProjects = () => {
           const data = snapshot.val();
 
           const projectsArray = Object.values(data);
-          console.log("Fetched Projects:", projectsArray);
           setProjects(projectsArray);
         } else {
           console.log("No data available");
