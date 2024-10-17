@@ -22,7 +22,7 @@ export async function POST(req) {
     const captchaData = await captchaResponse.json();
     console.log("Captcha response:", captchaData);
 
-    if (!captchaData.success || captchaData.score < 0.5) {
+    if (!captchaData.success || captchaData.score < 0.3) {
       return NextResponse.json(
         { error: "reCAPTCHA verification failed" },
         { status: 400 }

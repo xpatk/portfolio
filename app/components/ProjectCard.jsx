@@ -23,7 +23,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
       <div
         className="h-72 md:h-92 rounded-t-xl relative"
         style={{
-          background: `url(${downloadUrl})`,
+          backgroundImage: `url(${downloadUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

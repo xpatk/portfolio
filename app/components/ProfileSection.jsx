@@ -19,26 +19,28 @@ const ProfileSection = () => {
             <div className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 via-sky-700 to-gray-900">
               Hello, je suis{""}
             </div>
-            <TypeAnimation
-              sequence={[
-                "Patrycja",
-                1000,
-                "Développeuse",
-                1000,
-                // "Java Developer",
-                // 1000,
-                "Graphiste",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: "1.2em", display: "inline-block" }}
-              repeat={Infinity}
-              bg-gradient-to-r
-              from-gray-700
-              via-rose-500
-              to-orange-400
-            />
+            <div className="inline-block min-h-0 sm:min-h-[1.4em]">
+              <TypeAnimation
+                sequence={[
+                  "Patrycja",
+                  1000,
+                  "Dev",
+                  1000,
+                  // "Java Developer",
+                  // 1000,
+                  "Graphiste",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "1.2em", display: "inline-block" }}
+                repeat={Infinity}
+                bg-gradient-to-r
+                from-gray-700
+                via-rose-500
+                to-orange-400
+              />
+            </div>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Je me spécialise dans la création d&rsquo;applications web
