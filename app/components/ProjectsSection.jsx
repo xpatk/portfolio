@@ -1,15 +1,12 @@
-"use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import useFetchProjects from "../useFetchProjects";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ProjectsSection = () => {
   const { projects, loading } = useFetchProjects();
   const [tag, setTag] = useState("Tous");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag) => setTag(newTag);
 
@@ -46,9 +43,9 @@ const ProjectsSection = () => {
           isSelected={tag === "Back-end"}
         />
       </div>
-      <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {filteredProjects.length === 0 ? (
-          <p className="text-white">Chargement..</p>
+          <p className="text-white">Chargement...</p>
         ) : (
           filteredProjects.map((project, index) => (
             <motion.li
@@ -56,7 +53,7 @@ const ProjectsSection = () => {
               variants={cardVariants}
               initial="initial"
               animate="animate"
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.7, delay: index * 0.6 }}
             >
               <ProjectCard
                 title={project.title}
