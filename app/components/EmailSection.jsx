@@ -12,33 +12,29 @@ const EmailSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await recaptchaRef.current.execute();
-    recaptchaRef.current.reset();
 
-    if (!token) {
-      console.error("reCAPTCHA token is missing");
-      setCaptchaError(true);
-      return;
-    }
+    try {
+      const token = await recaptchaRef.current.execute();
+      if (!token) throw new Error();
 
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-      token,
-    };
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: e.target.email.value,
+          subject: e.target.subject.value,
+          message: e.target.message.value,
+          token,
+        }),
+      });
 
-    const response = await fetch("/api/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+      if (!response.ok) throw new Error();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
       setEmailSubmitted(true);
-    } else {
-      console.error("Failed to send", response);
+    } catch {
+      setCaptchaError(true);
+    } finally {
+      recaptchaRef.current.reset();
     }
   };
 
